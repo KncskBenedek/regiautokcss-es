@@ -1,0 +1,125 @@
+@charset "UTF-8";
+*{
+    box-sizing: border-box;
+}
+
+
+main{
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas: "h h h"
+                         "n n n"
+                         "ar ar as"
+                         "f f f";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: ar;
+    display: grid;
+    grid-template-areas: "be fo";
+
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+    text-align: center;
+}
+
+.kep{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+article img{
+    max-width: 266px;
+    width: 225px;
+    height: auto;
+    
+}
+
+#benz{
+    grid-area: be;
+}
+
+#ford{
+    grid-area: fo;
+}
+table{
+    border-collapse: collapse;
+
+
+}
+
+
+.valami p{
+    text-align: left;
+}
+
+.valami{
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+}
+h1{
+    color:darkgreen;
+}
+nav{
+    background-color: darkgreen;
+
+}
+nav li a{
+    text-decoration: none;
+    color: darkseagreen;
+}
+nav ul{
+    
+    list-style-type: none;
+}
+nav li{
+    display: inline;
+    grid-area: l;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: wheat;
+}
+th{
+    border-bottom: 1px solid black;
+}
+@media screen and (max-width:900px) {
+    main{
+        grid-template-areas: "h"
+        "n"
+        "ar"
+        "as"
+        "f";
+        
+        
+    }
+    nav li{
+        display: block;
+    }
+    article{
+        grid-area: ar;
+        display: grid;
+        grid-template-areas: "be"
+        "fo";
+        
+    }
+}
